@@ -1,0 +1,19 @@
+en:
+  enumeration_names:
+    user_defined_enum_1: Primary Collector
+    user_defined_enum_3: New/Addition?
+  enumerations:
+    user_defined_enum_1:
+      Andrew Armacost: Andrew Armacost
+      Jacquie Reid: Jacquie Read
+      John Gartrell: John Gartrell
+      Kelly Wooten: Kelly Wooten
+      Laura Micham: Laura Micham
+      Lisa McCarty: Lisa McCarty
+      Naomi Nelson: Naomi Nelson
+      Patrick Stawski: Patrick Stawski
+      Sara Berghausen: Sara Berghausen
+      Valerie Gillispie: Valerie Gillispie
+    user_defined_enum_3:
+      New: New
+      Addition: Addition

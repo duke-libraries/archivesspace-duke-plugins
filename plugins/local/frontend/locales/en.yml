@@ -1,0 +1,81 @@
+en:
+  welcome:
+    heading: ArchivesSpace - Rubenstein Staff View
+    message: Welcome. Please sign in and stay awhile.
+    message_logged_in: Welcome. You're signed in.
+  advanced_search:
+    text:
+      accession_id_0: Accession Number 1
+      accession_id_1: Accession Number 2
+      agents: Names
+      created_by: Created by
+      last_modified_by: Last_modified_by
+      user_defined_string_1: Collector Initials
+      user_defined_string_2: New or Addition
+      user_defined_integer_1: Order Number (Aleph)
+    date:
+      accession_date: Accession date
+      date_begin: Begin date
+      date_end: End date
+    boolean:
+      access_restrictions: Access Restrictions?
+      has_external_documents: External Documents?
+      has_rights_statements: Rights Statements?
+      restrictions_apply: Restrictions Apply?
+      use_restrictions: Use Restrictions?
+      user_defined_boolean_1: Electronic Media Present?
+    enum:
+      accession_acquisition_type: Acquisition Type
+      collection_management_processing_priority: Processing Priority
+      collection_management_processing_status: Processing Status
+      user_defined_enum_1: Primary Collector Name
+      user_defined_enum_3: New/Addition?
+  user_defined:
+    boolean_1: Electronic Media Present?
+    boolean_1_tooltip: |
+        <p>Does the accession contain electronic media?</p>
+    boolean_2: Ready for Tech. Services?
+    boolean_3: ignore
+    integer_1: Order Number (Aleph)
+    integer_2: OCLC Number
+    integer_3: ignore
+    real_1: Appraisal Value
+    real_1_tooltip: |
+        <p>OPTIONAL: Record appraisal value of accession if known.</p>
+    real_2: ignore
+    real_3: ignore
+    string_1: Collector Initials
+    string_1_tooltip: |
+        <p>Enter collector initials in all caps (e.g. JAA)</p>
+    string_2: New/Addition?
+    string_2_tooltip: |
+        <p>Enter "New" or "Addition"</p>
+    string_3: Accessioner Initials
+    string_3_tooltip: |
+        <p>Enter accessioner initials in all caps (e.g. JAA)</p>
+    string_4: ignore
+    text_1: Special Media Formats
+    text_1_tooltip: |
+        <p>List any special media formats included in the accession (A/V items, photographs, CDs, DVDs, etc.)</p>
+    text_2: Location at Accessioning
+    text_2_tooltip: | 
+        <p>FOR MIGRATED RECORDS ONLY.</p>
+    text_3: Source Contact Information
+    text_3_tooltip: | 
+        <p>FOR MIGRATED RECORDS ONLY.</p>
+    text_4: ignore
+    text_5: ignore
+    date_1: Arrival Date
+    date_1_tooltip: |
+        <p>Enter the date that this accession arrived at Duke?</p>
+    date_1_inline_help: e.g. YYYY-MM-DD
+    date_2: ignore
+    date_2_inline_help: e.g. YYYY-MM-DD
+    date_3: ignore
+    date_3_inline_help: e.g. YYYY-MM-DD
+    enum_1: Primary Collector Name
+    enum_2: ignore
+    enum_3: New or Addition?
+    enum_4: ignore
+    _singular: User Defined
+    _plural: User Defined
