@@ -4,8 +4,12 @@ Local plugins for customizing ArchivesSpace at Duke
 Each plugin is a directory within the /plugins directory with the name of the plugin (e.g. aspace-search-identifier, lcnaf, local)
 
 To install plugins:
+
+
      1. After installing or upgrading the ASpace application, move the individual plugin directories into the archivesspace/plugins directory
+	 
      2. Overwrite the default config.rb file in archivesspace/config with this modified one
+	 
      3. Restart the application
 
 
