@@ -16,9 +16,10 @@ The plugins in this repo make the following changes:
 - local:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down
-     - Changes labels for user-defined fields
+     - Changes labels and tooltips for user-defined fields and some collection management fields
      - Move accession date facet to top (search_result_data.rb)
      - Adds translations for user defined list values
+     - Relaxes date constraint from YYYY-MM-DD to YYYY. See: https://gist.github.com/cfitz/87ec5cfa2bcd5f347949
 - config.rb:
       - Change default number of search results from 10 to 50
       - Activate plugins (line 127)
