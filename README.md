@@ -13,6 +13,7 @@ To install plugins:
 The plugins in this repo make the following changes:
 
 - aspace-search-identifier: Adds Identifier column to search result and browse screens
+- aspace-public-formats: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
 - local:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down
@@ -23,3 +24,4 @@ The plugins in this repo make the following changes:
 - config.rb:
       - Change default number of search results from 10 to 50
       - Activate plugins (line 127)
+      - Specify public-format links for various serializations (EAD, MARCXML, etc.)
