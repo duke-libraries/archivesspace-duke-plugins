@@ -125,6 +125,9 @@ AppConfig[:default_page_size] = 50
 #
 ## Plug-ins to load. They will load in the order specified
 AppConfig[:plugins] = ['local',  'aspace-public-formats', 'aspace-search-identifier', 'lcnaf']
+AppConfig[:public_formats_resource_links] = ["ead", "marcxml", "ead_pdf"]
+AppConfig[:public_formats_digital_object_links] = ["dc", "mets", "mods"]
+
 #
 ## URL to direct the feedback link
 ## You can remove this from the footer by making the value blank. 
