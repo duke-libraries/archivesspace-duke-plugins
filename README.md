@@ -12,10 +12,10 @@ To install plugins:
 
 The plugins in this repo make the following changes:
 
-- aspace-search-identifier: Adds Identifier column to search result and browse screens
-- aspace-public-formats: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
-- duke-ead-exporter: customizes EAD exporter to supply dao/@xlink:role attribue in EAD based on value of File Version Use Statement (e.g. image-service, audio-streaming, etc.)
-- local:
+- **aspace-search-identifier**: Adds Identifier column to search result and browse screens
+- **aspace-public-formats**: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
+- **duke-ead-exporter**: customizes EAD exporter to supply dao/@xlink:role attribue in EAD based on value of File Version Use Statement (e.g. image-service, audio-streaming, etc.)
+- **local**:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down
      - Changes labels and tooltips for user-defined fields and some collection management fields
@@ -23,7 +23,7 @@ The plugins in this repo make the following changes:
      - Adds translations for user defined list values
      - Relaxes date constraint from YYYY-MM-DD to YYYY. See: https://gist.github.com/cfitz/87ec5cfa2bcd5f347949
      - backend/model/solr.rb - changes default facet sort to alpha order instead of hit count order
-- config.rb:
+- **config.rb**:
       - Change default number of search results from 10 to 50
       - Activate plugins (line 127)
       - Specify public-format links for various serializations (EAD, MARCXML, etc.)
