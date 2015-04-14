@@ -2,6 +2,8 @@ en:
   enumeration_names:
     user_defined_enum_1: Primary Collector
     user_defined_enum_3: New/Addition?
+    collection_management_processing_priority: Desired Processing Level
+
   enumerations:
     user_defined_enum_1:
       Andrew Armacost: Andrew Armacost
@@ -17,3 +19,23 @@ en:
     user_defined_enum_3:
       New: New
       Addition: Addition
+    accession_acquisition_type:
+      other: Other
+      unknown: Unknown
+    collection_management_processing_priority:
+      1 - accessioning: 1 - accessioning
+      2 - core level processing: 2 - core level processing
+      3 - folder level processing: 3 - folder level processing
+      4 - item level processing: 4 - item level processing
+      do not use - highest research value: do not use - highest research value
+      do not use - high research value: do not use - high research value
+      do not use - medium research value: do not use - medium research value
+      do not use - low research value: do not use - low research value
+      do not use - unknown research value: do not use - unknown research value
+    collection_management_processing_status:
+      level 1 - accessioning: Level 1 - accessioning
+      level 2 - core level: Level 2 - core level
+      level 3 - folder level: Level 3 - folder level
+      level 4 - item level: Level 4 - item level
+      new: New
+      new (unprocessed or in route): New (unprocessed or in route)

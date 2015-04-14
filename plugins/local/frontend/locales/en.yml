@@ -26,7 +26,7 @@ en:
       user_defined_boolean_1: Electronic Media Present?
     enum:
       accession_acquisition_type: Acquisition Type
-      collection_management_processing_priority: Processing Priority
+      collection_management_processing_priority: Desired Processing Level
       collection_management_processing_status: Processing Status
       user_defined_enum_1: Primary Collector Name
       user_defined_enum_3: New/Addition?
