@@ -40,3 +40,5 @@ en:
       level 4 - item level: Level 4 - item level
       new: New
       new (unprocessed or in route): New (unprocessed or in route)
+    resource_finding_aid_status:
+      Published: Published

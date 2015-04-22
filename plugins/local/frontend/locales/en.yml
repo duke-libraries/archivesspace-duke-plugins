@@ -27,8 +27,9 @@ en:
     enum:
       accession_acquisition_type: Acquisition Type
       collection_management_processing_priority: Desired Processing Level
-      collection_management_processing_status: Processing Status
+      resource_finding_aid_status: Finding Aid Status
       user_defined_enum_1: Primary Collector Name
+      collection_management_processing_status: Processing Status
       user_defined_enum_3: New/Addition?
 
   collection_management: &collection_management_attributes
