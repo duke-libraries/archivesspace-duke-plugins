@@ -7,14 +7,15 @@ en:
   enumerations:
     user_defined_enum_1:
       Andrew Armacost: Andrew Armacost
-      Jacquie Reid: Jacquie Read
+      Jacqueline Reid Wachholz: Jacqueline Reid Wachholz
       John Gartrell: John Gartrell
       Kelly Wooten: Kelly Wooten
       Laura Micham: Laura Micham
       Lisa McCarty: Lisa McCarty
       Naomi Nelson: Naomi Nelson
       Patrick Stawski: Patrick Stawski
-      Sara Berghausen: Sara Berghausen
+      Rachel Ingold: Rachel Ingold
+      Sara Seten Berghausen: Sara Seten Berghausen
       Valerie Gillispie: Valerie Gillispie
     user_defined_enum_3:
       New: New
@@ -34,14 +35,17 @@ en:
       do not use - low research value: do not use - low research value
       do not use - unknown research value: do not use - unknown research value
     collection_management_processing_status:
-      level 1 - accessioning: Level 1 - accessioning
-      level 2 - core level: Level 2 - core level
-      level 3 - folder level: Level 3 - folder level
-      level 4 - item level: Level 4 - item level
+      completed: Completed
+      completed_level1_accessioning: Completed - Level 1 - Accessioning
+      completed_level2_core_level: Completed - Level 2 - Core Level
+      completed_level3_folder_level: Completed - Level 3 - Folder Level
+      completed_level4_item_level: Completed - Level 4 - Item Level
       new: New
-      new (unprocessed or in route): New (unprocessed or in route)
+      new_unprocessed: New - Unprocessed
     resource_finding_aid_status:
-      Published: Published    
+      published: Published
+      placeholder_record: Placeholder Record
+      temp_record: Temp Record
     file_version_file_format_name:
       aiff: Audio Interchange File Format
       avi: Audio/Video Interleaved Format
