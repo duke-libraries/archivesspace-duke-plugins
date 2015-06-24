@@ -41,4 +41,21 @@ en:
       new: New
       new (unprocessed or in route): New (unprocessed or in route)
     resource_finding_aid_status:
-      Published: Published
+      Published: Published    
+    file_version_file_format_name:
+      aiff: Audio Interchange File Format
+      avi: Audio/Video Interleaved Format
+      gif: Graphics Interchange Format
+      jpeg: JPEG File Interchange Format
+      mp3: MPEG Audio Layer 3
+      pdf: Portable Document Format
+      tiff: Tagged Image File Format
+      txt: Plain Text File
+      #Values below added to account for common electronic record formats    
+      dd: Raw Disk Image (dd)
+      img: Raw Disk Image (img)
+      e01: Forensic Disk Image (e01)
+      aff: Forensic Disk Image (aff)
+      iso: ISO Disk Image (iso)
+      zip: Bagit ZIP Archive (zip)
+      tar: TARball (tar, tar.gz)
