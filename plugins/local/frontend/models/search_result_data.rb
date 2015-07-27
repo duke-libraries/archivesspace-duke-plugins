@@ -7,13 +7,13 @@ require Rails.root.join('app/models/search_result_data')
 
 class SearchResultData
 
-# this changes what facets are requested for Resource searches. Display order follows the order in the array. 
+# this changes what facets are requested for searches. Display order follows the order in the array. 
  def self.ACCESSION_FACETS
-   ["accession_date_year","creators","subjects"]
+   ["four_part_id","accession_date_year","acquisition_type","creators","subjects"]
  end
 
  def self.RESOURCE_FACETS
-   ["level","publish","creators"]
+   ["finding_aid_status","ead_id","creators","subjects"]
  end
  
  def self.SUBJECT_FACETS
