@@ -31,6 +31,7 @@ en:
     enum:
       accession_acquisition_type: Acquisition Type
       collection_management_processing_priority: Desired Processing Level
+      event_event_type: Event Type
       resource_finding_aid_status: Finding Aid Status
       user_defined_enum_1: Primary Collector Name
       collection_management_processing_status: Processing Status
@@ -64,6 +65,31 @@ en:
         <li>Level 2 - Core Level</li>
         <li>Level 3 - Folder Level</li>
         <li>Level 4 - Item Level</li>
+        </ul>
+
+  resource:
+    id_0_tooltip: |
+        <p>REQUIRED FIELD. The identification number assigned to each discrete Resource within a Repository.</p>
+        <p>See DACS 2.1.3</p>
+        <p>Examples:</p>
+        <ul>
+        <li>RL.10001 (Two elements "RL" + "10001")</li>
+        <li>UA.01.01.0001 (four elements for UA record groups)</li>
+        </ul>
+    ead_id_tooltip: |
+        <p>The identifier for the EAD generated from the resource description, typically a file name without the .xml extension. Needs to be unique within the repository context. The EADID forms the last part of the finding aid URL.</p>
+        <p>The EADID is typically in the format lastnamefirstname.xml or organizationname.xml. Use abbreviations sparingly.</p>
+    ead_location_tooltip: |
+        <p>The URL for the published EAD file. Please include the trailing slash.</p>
+    ead_location_inline_help: http://library.duke.edu/rubenstein/findingaids/[eadid]/
+    finding_aid_title_tooltip: |
+        <p>The title for the finding aid associated with this Resource.</p>
+        <p>Include collection inclusive dates and capitalize words like 'papers' and 'records' here.</p>
+        <p>Examples:</p>
+        <ul>
+        <li>Guide to the Doris Duke Photograph Collection, 1870-2006</li>
+        <li>Guide to the J. Walter Thompson Company. Newsletter Collection, 1910-2005</li>
+        <li>Guide to the Divinity School Records, circa 1920-2005</li>
         </ul>
 
 
