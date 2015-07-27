@@ -42,10 +42,21 @@ en:
       completed_level4_item_level: Completed - Level 4 - Item Level
       new: New
       new_unprocessed: New - Unprocessed
+    event_event_type:
+      processing_completed: Processing Completed
+      processing_started: Processing Started
+      processing_new: Processing-Unprocessed
+      processing_in_progress: Processing-in-progress
+      processing_completed_level1_accessioning: Processed-Level 1-Accessioning
+      processing_completed_level2_core_level: Processed-Level 2-Core Level
+      processing_completed_level3_folder_level: Processed-Level 3-Folder Level
+      processing_completed_level4_item_level: Processed-Level 4-Item Level
+      processing_new_unprocessed: New-Unprocessed
     resource_finding_aid_status:
       published: Published
       placeholder_record: Placeholder Record
       temp_record: Temp Record
+      temp_record_stead: Temp Record (Steady)
     file_version_file_format_name:
       aiff: Audio Interchange File Format
       avi: Audio/Video Interleaved Format
