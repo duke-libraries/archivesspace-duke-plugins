@@ -42,6 +42,97 @@ en:
       completed_level4_item_level: Completed - Level 4 - Item Level
       new: New
       new_unprocessed: New - Unprocessed
+
+    container_type:
+      artifact-box: artifact-box
+      audio-cassette: audio-cassette
+      audio-cd: audio-cd
+      audio-disc: audio-disc
+      audio-file: audio-file
+      audio-phonodisc: audio-phonodisc
+      audio-reel: audio-reel
+      box: box
+      carton: carton
+      case: case
+      cassette: cassette
+      cassette-box: cassette-box
+      cd: cd
+      cigar-box: cigar-box
+      data-cd: data-cd
+      disk: disk
+      drawer: drawer
+      dvd: dvd
+      e-folder: e-folder
+      film: film
+      film-reel: film-reel
+      folder: folder
+      frame: frame
+      framed-item: framed-item
+      freezer: freezer
+      image: image
+      index-box: index-box
+      item: item
+      map-case: map-case
+      ms: ms
+      nitrate-cabinet: nitrate-cabinet
+      notebook: notebook
+      object: object
+      optical-disc: optical-disc
+      oversize-box: oversize-box
+      oversize-cabinet: oversize-cabinet
+      oversize-film-can: oversize-film-can
+      oversize-folder: oversize-folder
+      oversize-image: oversize-image
+      page: page
+      print: print
+      reel: reel
+      scrapbook: scrapbook
+      server: server
+      slide-box: slide-box
+      tape: tape
+      tube: tube
+      vault: vault
+      video-cassette: video-cassette
+      video-disc: video-disc
+      video-file: video-file
+      video-reel: video-reel
+      videotape: videotape
+      volume: volume
+
+    file_version_use_statement:
+      audio-clip: Audio-Clip
+      audio-master: Audio-Master
+      audio-master-edited: Audio-Master-Edited
+      audio-service: Audio-Service
+      audio-streaming: Audio-Streaming
+      audio-use: Audio-Use
+      electronic-record-master: Electronic-Record-Master
+      electronic-record-use-copy: Electronic-Record-Use-Copy
+      image-master: Image-Master
+      image-master-edited: Image-Master-Edited
+      image-service: Image-Service
+      image-service-edited: Image-Service-Edited
+      image-service-highres: Image-Service-HighRes
+      image-service-lowres: Image-Service-LowRes
+      image-service-medres: Image-Service-MedRes
+      image-thumbnail: Image-Thumbnail
+      text-codebook: Text-Codebook
+      text-data: Text-Data
+      text-data_definition: Text-Data Definition
+      text-georeference: Text-Georeference
+      text-master: Text-Master
+      text-ocr-edited: Text-Ocr-Edited
+      text-ocr-unedited: Text-Ocr-Unedited
+      text-service: Text-Service
+      text-tei-transcripted: Text-Tei-Transcripted
+      text-tei-translated: Text-Tei-Translated
+      video-clip: Video-Clip
+      video-master: Video-Master
+      video-master-edited: Video-Master-Edited
+      video-service: Video-Service
+      video-streaming: Video-Streaming
+      web-resource-link: Web-Resource-Link
+
     event_event_type:
       processing_completed: Processing Completed
       processing_started: Processing Started
