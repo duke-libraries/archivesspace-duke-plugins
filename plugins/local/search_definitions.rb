@@ -36,6 +36,6 @@ AdvancedSearch.define_field(:name => 'linked_agent_role', :type => :enum, :visib
 AdvancedSearch.define_field(:name => 'collection_management_processing_priority', :type => :enum, :visibility => [:staff], :solr_field => 'collection_management_processing_priority_u_ustr')
 AdvancedSearch.define_field(:name => 'collection_management_processing_status', :type => :enum, :visibility => [:staff], :solr_field => 'collection_management_processing_status_u_ustr')
 AdvancedSearch.define_field(:name => 'event_event_type', :type => :enum, :visibility => [:staff], :solr_field => 'event_type')
-AdvancedSearch.define_field(:name => 'user_defined_enum_1', :type => :enum, :visibility => [:staff], :solr_field => 'enum_2_u_ustr')
-AdvancedSearch.define_field(:name => 'user_defined_enum_3', :type => :enum, :visibility => [:staff], :solr_field => 'enum_3_u_ustr')
+AdvancedSearch.define_field(:name => 'user_defined_enum_1', :type => :enum, :visibility => [:staff], :solr_field => 'enum_1_enum_s')
+AdvancedSearch.define_field(:name => 'user_defined_enum_3', :type => :enum, :visibility => [:staff], :solr_field => 'enum_3_enum_s')
 AdvancedSearch.define_field(:name => 'resource_finding_aid_status', :type => :enum, :visibility => [:staff], :solr_field => 'finding_aid_status')
