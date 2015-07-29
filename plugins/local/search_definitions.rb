@@ -1,13 +1,16 @@
 # Customized for Duke
+
 # Text fields
 AdvancedSearch.define_field(:name => 'agents', :type => :text, :visibility => [:staff], :solr_field => 'agents')
 AdvancedSearch.define_field(:name => 'created_by', :type => :text, :visibility => [:staff], :solr_field => 'created_by')
 AdvancedSearch.define_field(:name => 'last_modified_by', :type => :text, :visibility => [:staff], :solr_field => 'last_modified_by')
-
-#Fix for searching on Identifiers - 'four_part_id' field is also available, change to :text?
+AdvancedSearch.define_field(:name => 'accession_id_0', :type => :text, :visibility => [:staff], :solr_field => 'accession_id_0_u_ustr')
 AdvancedSearch.define_field(:name => 'four_part_id', :type => :text, :visibility => [:staff], :solr_field => 'four_part_id')
-#user_defined_string_1 (Collector Initials) - not working?
-AdvancedSearch.define_field(:name => 'user_defined_string_1', :type => :text, :visibility => [:staff], :solr_field => '*_u_ustr')
+AdvancedSearch.define_field(:name => 'user_defined_string_1', :type => :text, :visibility => [:staff], :solr_field => 'string_1_u_ustr')
+#AdvancedSearch.define_field(:name => 'user_defined_text_1', :type => :text, :visibility => [:staff], :solr_field => 'text_1_u_utext')
+#AdvancedSearch.define_field(:name => 'user_defined_text_2', :type => :text, :visibility => [:staff], :solr_field => 'text_2_u_utext')
+#AdvancedSearch.define_field(:name => 'user_defined_text_3', :type => :text, :visibility => [:staff], :solr_field => 'text_3_u_utext')
+#AdvancedSearch.define_field(:name => 'user_defined_text_4', :type => :text, :visibility => [:staff], :solr_field => 'text_4_u_utext')
 AdvancedSearch.define_field(:name => 'ead_id', :type => :text, :visibility => [:staff], :solr_field => 'ead_id')
 
 # Booleans
@@ -23,15 +26,16 @@ AdvancedSearch.define_field(:name => 'has_rights_statements', :type => :boolean,
 AdvancedSearch.define_field(:name => 'date_begin', :type => :date, :visibility => [:staff], :solr_field => 'date_begin_u_udate')
 AdvancedSearch.define_field(:name => 'date_end', :type => :date, :visibility => [:staff], :solr_field => 'date_end_u_udate')
 AdvancedSearch.define_field(:name => 'accession_date', :type => :date, :visibility => [:staff], :solr_field => 'accession_date_u_udate')
-
-
+AdvancedSearch.define_field(:name => 'event_begin', :type => :date, :visibility => [:staff], :solr_field => 'event_begin_u_udate')
+AdvancedSearch.define_field(:name => 'event_end', :type => :date, :visibility => [:staff], :solr_field => 'event_end_u_udate')
 
 # Enums
 AdvancedSearch.define_field(:name => 'accession_acquisition_type', :type => :enum, :visibility => [:staff], :solr_field => 'acquisition_type')
-#AdvancedSearch.define_field(:name => 'extent_extent_type', :type => :enum, :visibility => [:staff], :solr_field => 'extent_type_u_ustr')
-#AdvancedSearch.define_field(:name => 'linked_agent_role', :type => :enum, :visibility => [:staff], :solr_field => 'agent_roles_u_ustr')
-AdvancedSearch.define_field(:name => 'collection_management_processing_priority', :type => :enum, :visibility => [:staff], :solr_field => 'processing_priority')
+AdvancedSearch.define_field(:name => 'extent_extent_type', :type => :enum, :visibility => [:staff], :solr_field => 'extent_type_u_ustr')
+AdvancedSearch.define_field(:name => 'linked_agent_role', :type => :enum, :visibility => [:staff], :solr_field => 'agent_roles_u_ustr')
+AdvancedSearch.define_field(:name => 'collection_management_processing_priority', :type => :enum, :visibility => [:staff], :solr_field => 'collection_management_processing_priority_u_ustr')
+AdvancedSearch.define_field(:name => 'collection_management_processing_status', :type => :enum, :visibility => [:staff], :solr_field => 'collection_management_processing_status_u_ustr')
 AdvancedSearch.define_field(:name => 'event_event_type', :type => :enum, :visibility => [:staff], :solr_field => 'event_type')
-AdvancedSearch.define_field(:name => 'user_defined_enum_1', :type => :enum, :visibility => [:staff], :solr_field => '*_enum_s')
-AdvancedSearch.define_field(:name => 'user_defined_enum_3', :type => :enum, :visibility => [:staff], :solr_field => '*_enum_s')
+AdvancedSearch.define_field(:name => 'user_defined_enum_1', :type => :enum, :visibility => [:staff], :solr_field => 'enum_2_u_ustr')
+AdvancedSearch.define_field(:name => 'user_defined_enum_3', :type => :enum, :visibility => [:staff], :solr_field => 'enum_3_u_ustr')
 AdvancedSearch.define_field(:name => 'resource_finding_aid_status', :type => :enum, :visibility => [:staff], :solr_field => 'finding_aid_status')
