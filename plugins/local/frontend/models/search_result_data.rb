@@ -9,7 +9,7 @@ class SearchResultData
 
 # this changes what facets are requested for searches. Display order follows the order in the array. 
  def self.ACCESSION_FACETS
-   ["four_part_id","accession_date_year","acquisition_type","creators","subjects"]
+   ["accession_id_0_u_ustr","accession_date_year","acquisition_type","creators","subjects"]
  end
 
  def self.RESOURCE_FACETS
