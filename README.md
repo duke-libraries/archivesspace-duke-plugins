@@ -13,6 +13,7 @@ To install plugins:
 
 The plugins in this repo make the following changes:
 
+- **archivesspace-delete-safety-plugin**: Modified display of Delete button in resource tree view to distinguish between deleting entire resource and archival object.  Plugin courtesy of Trevor Thorton (NCSU): https://github.com/trevorthornton/archivesspace-delete-safety-plugin
 - **aspace-search-identifier**: Adds Identifier column to search result and browse screens
 - **aspace-public-formats**: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
 - **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc.
@@ -25,6 +26,7 @@ The plugins in this repo make the following changes:
      - Adds translations for user defined list values
      - Relaxes date constraint from YYYY-MM-DD to YYYY. See: https://gist.github.com/cfitz/87ec5cfa2bcd5f347949
      - backend/model/solr.rb - changes default facet sort to alpha order instead of hit count order
+     - changes default sort to 'modified descending' for resources and accessions: /local/frontend/controllers
 - **config.rb**:
       - Changes default number of search results from 10 to 50
       - Activates plugins (line 127)
