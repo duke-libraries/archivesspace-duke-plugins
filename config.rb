@@ -124,7 +124,7 @@ AppConfig[:default_page_size] = 50
 #AppConfig[:report_pdf_font_family] = "\"DejaVu Sans\", sans-serif"
 #
 ## Plug-ins to load. They will load in the order specified
-AppConfig[:plugins] = ['local',  'aspace-public-formats', 'aspace-search-identifier', 'lcnaf', 'duke-ead-exporter', 'duke-advanced-search', 'archivesspace-delete-safety-plugin']
+AppConfig[:plugins] = ['local',  'aspace-public-formats', 'aspace-search-identifier', 'lcnaf', 'duke-ead-exporter', 'duke-advanced-search', 'duke-export-option-defaults', 'archivesspace-delete-safety-plugin']
 AppConfig[:public_formats_resource_links] = ["ead", "marcxml", "ead_pdf"]
 AppConfig[:public_formats_digital_object_links] = ["dc", "mets", "mods"]
 
