@@ -18,6 +18,7 @@ The plugins in this repo make the following changes:
 - **aspace-public-formats**: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
 - **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc.
 - **duke-ead-exporter**: customizes EAD exporter to supply dao/@xlink:role attribue in EAD based on value of File Version Use Statement (e.g. image-service, audio-streaming, etc.)
+- **duke-export-option-defaults**: changes default options for exporting EAD in staff interface drop-down menu (include_unpublished=false, include_daos=true, numbered_cs=true)
 - **local**:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down (search_definitions.rb)
