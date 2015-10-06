@@ -154,3 +154,22 @@ en:
   user_defined:
     _singular: Duke Custom Fields
     _plural: Duke Custom Fields
+    enum_1: Primary Collector Name
+    enum_3: New or Addition?
+    date_1: Arrival Date
+    boolean_1: Electronic Media Present?
+    boolean_1_tooltip: |
+      <p>Does the accession contain electronic media?</p>
+    boolean_2: Ready for Tech. Services?
+    text_1: Special Media Formats
+    text_1_tooltip: |
+      <p>List any special media formats included in the accession (A/V items, photographs, CDs, DVDs, etc.)</p>
+    text_2: Location at Accessioning
+    text_2_tooltip: | 
+      <p>FOR MIGRATED RECORDS ONLY.</p>
+    integer_1: Order Number (Aleph)
+    integer_2: OCLC Number
+    real_1: Appraisal Value
+    real_1_tooltip: |
+        <p>OPTIONAL: Record appraisal value of accession if known.</p>
+

@@ -1,0 +1,37 @@
+<%
+
+def map_user_defined_to_labels(properties)
+  properties.map {|property| I18n.t("user_defined.#{property}")}
+end
+
+%>
+
+<% if AppConfig.has_key?(:user_defined_in_basic) %>
+    <%= javascript_include_tag "#{AppConfig[:frontend_prefix]}assets/user_defined_in_basic.js" %>
+
+    <script>
+     var fields = <%= ASUtils.to_json(map_user_defined_to_labels(AppConfig[:user_defined_in_basic].fetch(controller.controller_name, []))).html_safe %>;
+     var read_only_view = <%= controller.action_name == 'show' %>;
+     var hide_user_defined_section = <%= AppConfig[:user_defined_in_basic]['hide_user_defined_section'] %>;
+
+     var init = function () {
+         // Funny setTimeout here to move our initialization to the
+         // end of the page load.  We need this to run after the user
+         // defined field subform is in and its buttons have been wired
+         // up.
+         setTimeout(function () {
+             new UserDefinedInBasic().init(fields, read_only_view, hide_user_defined_section);
+         }, 0);
+     }
+
+     // For Resource record updates
+     $(document).bind("loadedrecordform.aspace", init);
+
+     // For everything else
+     // had to bind this call to window load because a bare call to init()
+     // was causing Firefox to jump the gun ... javascript, sheesh
+     $(window).load(init);
+
+    </script>
+
+<% end %>
