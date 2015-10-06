@@ -19,6 +19,7 @@ The plugins in this repo make the following changes:
 - **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc.
 - **duke-ead-exporter**: customizes EAD exporter to supply dao/@xlink:role attribue in EAD based on value of File Version Use Statement (e.g. image-service, audio-streaming, etc.)
 - **duke-export-option-defaults**: changes default options for exporting EAD in staff interface drop-down menu (include_unpublished=false, include_daos=true, numbered_cs=true)
+- **user_defined_in_basic**: adds selected user_defined fields for accession records to the Basic Informaiton Tab of the accession record form and removes the user-defined fields section entirely. Requires modification of config.rb and /plugins/local/frontend/locales/en.yml.  See: https://github.com/hudmol/user_defined_in_basic
 - **local**:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down (search_definitions.rb)
