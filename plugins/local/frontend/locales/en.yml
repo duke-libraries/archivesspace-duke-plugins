@@ -14,12 +14,9 @@ en:
       agents: Names
       created_by: Created by
       ead_id: EADID
-      finding_aid_status: Finding Aid Status
       four_part_id: Four Part ID
       last_modified_by: Last_modified_by
       processing_status: Processing Status
-      user_defined_string_1: Collector Initials
-      user_defined_string_2: New or Addition
       user_defined_integer_1: Order Number (Aleph)
     date:
       accession_date: Accession date
