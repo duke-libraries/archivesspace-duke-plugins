@@ -15,13 +15,13 @@ class MARCModel < ASpaceExport::ExportModel
   end
 
 
-#Hard code OCLC code of NDD for 040 $a $e
+#Hard code OCLC code of NDD for 040 $a $e. Our OCLC code is different than repository code NcD stored in Aspace repo record
   def handle_repo_code(repository)
     repo = repository['_resolved']
     return false unless repo
 
     sfa = repo['org_code'] ? repo['org_code'] : "Repository: #{repo['repo_code']}"
-#Remove 852 from mapping, may cause problems wiht auto-loading HOL record in Aleph import?
+#Remove 852 from mapping, may cause problems with auto-loading HOL record in Aleph/OLE import?
 #    df('852', ' ', ' ').with_sfs(
 #                        ['a', sfa],
 #                        ['b', repo['name']]
@@ -65,6 +65,143 @@ class MARCModel < ASpaceExport::ExportModel
     end
   end
 
+#Modifications to Agents:remove "former owner" from export for linked agents wth role=source (to fix export of center names). No other changes.  
+  def handle_agents(linked_agents)
+
+    handle_primary_creator(linked_agents)
+
+    subjects = linked_agents.select{|a| a['role'] == 'subject'}
+
+    subjects.each_with_index do |link, i|
+      subject = link['_resolved']
+      name = subject['display_name']
+      relator = link['relator']
+      terms = link['terms']
+      ind2 = source_to_code(name['source'])
+
+      case subject['agent_type']
+
+      when 'agent_corporate_entity'
+        code = '610'
+        ind1 = '2'
+        sfs = [
+                ['a', name['primary_name']],
+                ['b', name['subordinate_name_1']],
+                ['b', name['subordinate_name_2']],
+                ['n', name['number']],
+                ['g', name['qualifier']],
+              ]
+
+      when 'agent_person'
+        joint, ind1 = name['name_order'] == 'direct' ? [' ', '0'] : [', ', '1']
+        name_parts = [name['primary_name'], name['rest_of_name']].reject{|i| i.nil? || i.empty?}.join(joint)
+        ind1 = name['name_order'] == 'direct' ? '0' : '1'
+        code = '600'
+        sfs = [
+                ['a', name_parts],
+                ['b', name['number']],
+                ['c', %w(prefix title suffix).map {|prt| name[prt]}.compact.join(', ')],
+                ['q', name['fuller_form']],
+                ['d', name['dates']],
+                ['g', name['qualifier']],
+              ]
+
+      when 'agent_family'
+        code = '600'
+        ind1 = '3'
+        sfs = [
+                ['a', name['family_name']],
+                ['c', name['prefix']],
+                ['d', name['dates']],
+                ['g', name['qualifier']],
+              ]
+
+      end
+
+      terms.each do |t|
+        tag = case t['term_type']
+          when 'uniform_title'; 't'
+          when 'genre_form', 'style_period'; 'v'
+          when 'topical', 'cultural_context'; 'x'
+          when 'temporal'; 'y'
+          when 'geographic'; 'z'
+          end
+        sfs << [(tag), t['term']]
+      end
+
+      if ind2 == '7'
+        sfs << ['2', subject['source']]
+      end
+
+      df(code, ind1, ind2, i).with_sfs(*sfs)
+    end
+
+
+    creators = linked_agents.select{|a| a['role'] == 'creator'}[1..-1] || []
+    creators = creators + linked_agents.select{|a| a['role'] == 'source'}
+
+    creators.each do |link|
+      creator = link['_resolved']
+      name = creator['display_name']
+      relator = link['relator']
+      terms = link['terms']
+      role = link['role']
+
+      if relator
+        relator_sf = ['4', relator]
+      elsif role == 'source'
+#Don't supply $e for linked agents with role=source
+        #relator_sf =  ['e', 'former owner']
+      else
+        relator_sf = ['e', 'creator']
+      end
+
+      ind2 = ' '
+
+      case creator['agent_type']
+
+      when 'agent_corporate_entity'
+        code = '710'
+        ind1 = '2'
+        sfs = [
+                ['a', name['primary_name']],
+                ['b', name['subordinate_name_1']],
+                ['b', name['subordinate_name_2']],
+                ['n', name['number']],
+                ['g', name['qualifier']],
+              ]
+
+      when 'agent_person'
+        joint, ind1 = name['name_order'] == 'direct' ? [' ', '0'] : [', ', '1']
+        name_parts = [name['primary_name'], name['rest_of_name']].reject{|i| i.nil? || i.empty?}.join(joint)
+        ind1 = name['name_order'] == 'direct' ? '0' : '1'
+        code = '700'
+        sfs = [
+                ['a', name_parts],
+                ['b', name['number']],
+                ['c', %w(prefix title suffix).map {|prt| name[prt]}.compact.join(', ')],
+                ['q', name['fuller_form']],
+                ['d', name['dates']],
+                ['g', name['qualifier']],
+              ]
+
+      when 'agent_family'
+        ind1 = '3'
+        code = '700'
+        sfs = [
+                ['a', name['family_name']],
+                ['c', name['prefix']],
+                ['d', name['dates']],
+                ['g', name['qualifier']],
+              ]
+      end
+
+      sfs << relator_sf
+      df(code, ind1, ind2).with_sfs(*sfs)
+    end
+
+  end
+
 
 #Remove scopecontent note from MARC 520 export; Remove processinfo and physloc from 500 mapping
   def handle_notes(notes)
@@ -74,6 +211,7 @@ class MARCModel < ASpaceExport::ExportModel
       prefix =  case note['type']
                 when 'dimensions'; "Dimensions"
                 when 'physdesc'; "Physical Description note"
+                #when 'prefercite'; "Preferred Citation"
                 when 'materialspec'; "Material Specific Details"
                 #when 'physloc'; "Location of resource"
                 when 'phystech'; "Physical Characteristics / Technical Requirements"
@@ -97,9 +235,9 @@ class MARCModel < ASpaceExport::ExportModel
                   #  ['520', '2', ' ', 'a']
                   when 'abstract'
                     ['520', '3', ' ', 'a']
-#Prefercite incorrectly mapped to 534; changed to 524
-                  when 'prefercite'
-                    ['524', '8', ' ', 'a']
+#Prefercite incorrectly mapped to 534; changed to 524, suppress from export
+                  #when 'prefercite'
+                  #  ['524', '8', ' ', 'a']
                   when 'acqinfo'
                     ind1 = note['publish'] ? '1' : '0'
                     ['541', ind1, ' ', 'a']
@@ -116,9 +254,8 @@ class MARCModel < ASpaceExport::ExportModel
                     ['583', ind1, ' ', 'a']
                   when 'accruals'
                     ['584', 'a']
-#Remove altformavail and originals loc mapping (added to 500 instead). These fields are used just for location, no description of copies/originals 
-                  #when 'altformavail'
-                  #  ['535', '2', ' ', 'a']
+                  when 'altformavail'
+                    ['535', '2', ' ', 'a']
                   #when 'originalsloc'
                   #  ['535', '1', ' ', 'a']
                   when 'userestrict', 'legalstatus'

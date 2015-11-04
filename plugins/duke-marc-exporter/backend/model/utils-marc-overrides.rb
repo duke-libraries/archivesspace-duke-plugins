@@ -7,7 +7,7 @@ module ASpaceMappings
 
 #add local, lcnaf, ingest to ind2=0 mapping
       marc_code = case code
-                  when 'naf', 'lcsh', 'local', 'lcnaf', 'ingest'; 0
+                  when 'naf', 'lcsh', 'local', 'lcnaf', 'ingest', 'Library of Congress Subject Headings'; 0
                   when 'lcshac'; 1
                   when 'mesh'; 2
                   when 'nal'; 3
