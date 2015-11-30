@@ -8,7 +8,7 @@
 #AppConfig[:solr_indexing_frequency_seconds] = 30
 #AppConfig[:solr_facet_limit] = 100
 #
-AppConfig[:default_page_size] = 50
+AppConfig[:default_page_size] = 20
 #AppConfig[:max_page_size] = 250
 #
 ## Log level for the backend, values: (everything) debug, info, warn, error, fatal (severe only)
