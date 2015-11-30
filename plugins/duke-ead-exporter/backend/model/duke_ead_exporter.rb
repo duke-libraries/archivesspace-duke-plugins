@@ -28,22 +28,26 @@ class EADSerializer < ASpaceExport::Serializer
     
     
     if file_versions.empty?
+#A hack to put the digital object ID (typically an ARK) in the dao/@xpointer attribute
+      atts['xpointer'] = digital_object['digital_object_id']
       atts['xlink:href'] = digital_object['digital_object_id']
       atts['xlink:actuate'] = 'onRequest'
       atts['xlink:show'] = 'new'
-      xml.dao(atts) {
-        xml.daodesc{ sanitize_mixed_content(content, xml, fragments, true) } if content
-      }
+      xml.dao(atts) # REMOVE <daodesc> tagging-it's redundant {
+#        xml.daodesc{ sanitize_mixed_content(content, xml, fragments, true) } if content
+#      }
     else
       file_versions.each do |file_version|
-        atts['xlink:href'] = file_version['file_uri'] || digital_object['digital_object_id']
+#A hack to put the digital object ID (typically an ARK) in the dao/@xpointer attribute
+		atts['xpointer'] = digital_object['digital_object_id']
+		atts['xlink:href'] = file_version['file_uri'] || digital_object['digital_object_id']
         atts['xlink:actuate'] = file_version['xlink_actuate_attribute'] || 'onRequest'
         atts['xlink:show'] = file_version['xlink_show_attribute'] || 'new'
-        #Added below to serialize role attribute (use statement)
+#Added below to serialize role attribute (use statement)
         atts['xlink:role'] = file_version['use_statement'] || 'undefined'
-        xml.dao(atts) {
-          xml.daodesc{ sanitize_mixed_content(content, xml, fragments, true) } if content
-        }
+        xml.dao(atts) # REMOVE <daodesc> tagging-it's redundant {
+#          xml.daodesc{ sanitize_mixed_content(content, xml, fragments, true) } if content
+#        }
       end
     end
     
