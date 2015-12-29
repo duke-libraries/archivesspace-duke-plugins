@@ -4,9 +4,7 @@
 AdvancedSearch.define_field(:name => 'agents', :type => :text, :visibility => [:staff], :solr_field => 'agents')
 AdvancedSearch.define_field(:name => 'created_by', :type => :text, :visibility => [:staff], :solr_field => 'created_by')
 AdvancedSearch.define_field(:name => 'last_modified_by', :type => :text, :visibility => [:staff], :solr_field => 'last_modified_by')
-AdvancedSearch.define_field(:name => 'accession_id_0', :type => :text, :visibility => [:staff], :solr_field => 'accession_id_0_u_ustr')
 AdvancedSearch.define_field(:name => 'four_part_id', :type => :text, :visibility => [:staff], :solr_field => 'four_part_id')
-AdvancedSearch.define_field(:name => 'user_defined_string_1', :type => :text, :visibility => [:staff], :solr_field => 'string_1_u_ustr')
 #AdvancedSearch.define_field(:name => 'user_defined_text_1', :type => :text, :visibility => [:staff], :solr_field => 'text_1_u_utext')
 #AdvancedSearch.define_field(:name => 'user_defined_text_2', :type => :text, :visibility => [:staff], :solr_field => 'text_2_u_utext')
 #AdvancedSearch.define_field(:name => 'user_defined_text_3', :type => :text, :visibility => [:staff], :solr_field => 'text_3_u_utext')
@@ -19,6 +17,9 @@ AdvancedSearch.define_field(:name => 'access_restrictions', :type => :boolean, :
 AdvancedSearch.define_field(:name => 'use_restrictions', :type => :boolean, :visibility => [:staff], :solr_field => 'use_restrictions')
 AdvancedSearch.define_field(:name => 'has_external_documents', :type => :boolean, :visibility => [:staff], :solr_field => 'has_external_documents')
 AdvancedSearch.define_field(:name => 'has_rights_statements', :type => :boolean, :visibility => [:staff], :solr_field => 'has_rights_statements_u_ubool')
+
+AdvancedSearch.define_field(:name => 'user_defined_boolean_1', :type => :boolean, :visibility => [:staff], :solr_field => 'boolean_1_u_ubool')
+AdvancedSearch.define_field(:name => 'user_defined_boolean_2', :type => :boolean, :visibility => [:staff], :solr_field => 'boolean_2_u_ubool')
 
 
 

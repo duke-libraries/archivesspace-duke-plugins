@@ -96,6 +96,11 @@ class CommonIndexer
         doc['enum_1_u_ustr'] = record['record']['user_defined']['enum_1']
         doc['enum_2_u_ustr'] = record['record']['user_defined']['enum_2']
         doc['enum_3_u_ustr'] = record['record']['user_defined']['enum_3']
+
+        if doc['primary_type'] == 'accession'
+          doc['boolean_1_u_ubool'] = record['record']['user_defined']['boolean_1']
+          doc['boolean_2_u_ubool'] = record['record']['user_defined']['boolean_2']
+        end
       end
     }
   end
