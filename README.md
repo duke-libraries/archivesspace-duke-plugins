@@ -7,7 +7,7 @@ To install plugins:
 
    1. Stop the application
    2. Move the individual plugin directories into the archivesspace/plugins directory
-   3. Overwrite the default config.rb file in archivesspace/config with this modified one
+   3. Modify config.rb (in archivesspace/config) to list plugins below, change search result limit from 10 to 20, and specify public-format-links
    4. Run /archivesspace/scipts/setup-database.sh
    5. Restart the application /archivesspace/archivesspace.sh
 
