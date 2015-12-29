@@ -16,7 +16,7 @@ The plugins in this repo make the following changes:
 - **archivesspace-delete-safety-plugin**: Modified display of Delete button in resource tree view to distinguish between deleting entire resource and archival object.  Plugin courtesy of Trevor Thorton (NCSU): https://github.com/trevorthornton/archivesspace-delete-safety-plugin
 - **aspace-search-identifier**: Adds Identifier column to search result and browse screens
 - **aspace-public-formats**: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
-- **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc.
+- **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc. Must run setup-database.sh with each new upgrade. Modeled after: https://github.com/hudmol/extended_advanced_search
 - **duke-ead-exporter**: customizes EAD exporter to supply dao/@xlink:role attribue in EAD based on value of File Version Use Statement (e.g. image-service, audio-streaming, etc.)
 - **duke-marc-exporter**: customizes MARCXML exports to conform to local best practices at Duke. MARCXML records can be imported in OCLC Connexion, validated and further modified (control headings, adjust fixed fields, ect.). Some notes on modifications: https://docs.google.com/spreadsheets/d/1OcnmC-QJIlIv3uN--wr8we50EAxM_566xpj7Vd1wr2w/edit?usp=sharing
 - **duke-export-option-defaults**: changes default options for exporting EAD in staff interface drop-down menu (include_unpublished=false, include_daos=true, numbered_cs=true)
@@ -24,13 +24,13 @@ The plugins in this repo make the following changes:
 - **local**:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down (search_definitions.rb)
-     - Changes labels and tooltips for user-defined fields and some collection management fields
+     - Changes labels and tooltips for user-defined fields and some collection management fields (en.yml)
+     - Modifies facet labels in search/browse result pages (en.yml)
      - Moves accession date facet to top (search_result_data.rb)
-     - Adds translations for user defined list values
+     - Adds translations for user defined list values (enums/en.yml)
      - Relaxes date constraint from YYYY-MM-DD to YYYY. See: https://gist.github.com/cfitz/87ec5cfa2bcd5f347949
-     - backend/model/solr.rb - changes default facet sort to alpha order instead of hit count order
      - changes default sort to 'modified descending' for resources and accessions: /local/frontend/controllers
 - **config.rb**:
-      - Changes default number of search results from 10 to 50
+      - Changes default number of search results from 10 to 20
       - Activates plugins (line 127)
       - Specifies public-format links for various serializations (EAD, MARCXML, etc.)
