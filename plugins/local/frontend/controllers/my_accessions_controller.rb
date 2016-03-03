@@ -8,7 +8,7 @@ class AccessionsController < ApplicationController
 
 
   def index
-    params["sort"] ||= "accession_date desc"
+    params["sort"] ||= "create_time desc"
      @search_data = Search.for_type(session[:repo_id], "accession", params_for_backend_search.merge({"facet[]" => SearchResultData.ACCESSION_FACETS}))
   end
 
