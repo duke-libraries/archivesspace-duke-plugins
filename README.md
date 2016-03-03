@@ -29,7 +29,7 @@ The plugins in this repo make the following changes:
      - Moves accession date facet to top (search_result_data.rb)
      - Adds translations for user defined list values (enums/en.yml)
      - Relaxes date constraint from YYYY-MM-DD to YYYY. See: https://gist.github.com/cfitz/87ec5cfa2bcd5f347949
-     - changes default sort to 'created descending' for accessions and 'modified descending for resources: /local/frontend/controllers
+     - changes default sort to 'created descending' for accessions and resources: /local/frontend/controllers
 - **config.rb**:
       - Changes default number of search results from 10 to 20
       - Activates plugins (line 127)
