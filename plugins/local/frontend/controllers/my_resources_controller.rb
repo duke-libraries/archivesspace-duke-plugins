@@ -8,7 +8,7 @@ class ResourcesController < ApplicationController
 
 
   def index
-    params["sort"] ||= "user_mtime desc"
+    params["sort"] ||= "create_time desc"
     @search_data = Search.for_type(session[:repo_id], params[:include_components]==="true" ? ["resource", "archival_object"] : "resource", params_for_backend_search.merge({"facet[]" => SearchResultData.RESOURCE_FACETS}))
   end
 
