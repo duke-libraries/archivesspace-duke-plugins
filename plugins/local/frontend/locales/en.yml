@@ -4,7 +4,6 @@ en:
     message: Welcome. Please sign in and stay awhile.
     message_logged_in: Welcome. You're signed in.
 
-#controls facet labels on browse and search result pages. Full list is /frontend/config/locales/en.yml
   search_results:
     filter:
       acquisition_type: Acquisition Type
@@ -105,7 +104,13 @@ en:
         </ul>
 
   accession:
-    accession_id_0: Accession Part 1
+    id_0: Identifier
+    #added translation below for warning messages when Accession Part 2 is missing
+    id_1: Accession Part 2
+    disposition: Disposition
+    disposition_tooltip: |
+      <p>A note about what should be done with discards or duplicates, or a note to describe how a particular accession may have been assigned to different resources.</p>
+    disposition_inline_help: What should be done with discards or duplicates?
     user_defined: 
       boolean_1: Electronic Media Present?
       boolean_1_tooltip: |
