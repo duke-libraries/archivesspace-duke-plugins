@@ -1,7 +1,7 @@
 Duke EAD Importer plugin
 =================
 
-Modifies EAD importer to make all notes 'published' be default unless @audience='internal' in imported EAD
+Modifies EAD importer to set all notes to 'published' by default unless @audience='internal' in imported EAD
 
 Usage
 -----
