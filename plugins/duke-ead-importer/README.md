@@ -7,7 +7,7 @@ Usage
 -----
 
 1. Download the plugin to the archivesspace/plugins folder. 
-2. Add the name of the plugin in `config.rb`:
+2. Add the name of the plugin in `archivesspace/config/config.rb`:
 ```
 AppConfig[:plugins] << "duke-ead-importer"
 ```
