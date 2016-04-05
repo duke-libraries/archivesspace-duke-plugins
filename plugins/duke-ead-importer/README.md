@@ -6,9 +6,9 @@ Modifies EAD importer to make all notes 'published' be default unless @audience=
 Usage
 -----
 
-Download the plugin to the archivesspace/plugins folder. Add the name of the plugin in `config.rb`:
+1. Download the plugin to the archivesspace/plugins folder. 
+2. Add the name of the plugin in `config.rb`:
 ```
 AppConfig[:plugins] << "duke-ead-importer"
 ```
-Restart ArchivesSpace.
----
+2. Restart ArchivesSpace.
