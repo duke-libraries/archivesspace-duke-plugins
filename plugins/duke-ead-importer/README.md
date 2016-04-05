@@ -11,4 +11,4 @@ Usage
 ```
 AppConfig[:plugins] << "duke-ead-importer"
 ```
-2. Restart ArchivesSpace.
+3. Restart ArchivesSpace.
