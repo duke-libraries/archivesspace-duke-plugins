@@ -13,7 +13,8 @@
       "display_string" => {"type" => "string", "maxLength" => 8192, "readonly" => true},
 
       "id_0" => {"type" => "string", "ifmissing" => "error", "maxLength" => 255},
-      "id_1" => {"type" => "string", "ifmissing" => "warn", "maxLength" => 255},
+#Error if id_1 (accession number part 2) is missing
+      "id_1" => {"type" => "string", "ifmissing" => "error", "maxLength" => 255},
       "id_2" => {"type" => "string", "maxLength" => 255},
       "id_3" => {"type" => "string", "maxLength" => 255},
 
@@ -90,8 +91,8 @@
           }
         }
       },
-
-      "extents" => {"ifmissing" => "warn", "type" => "array", "items" => {"type" => "JSONModel(:extent) object"}},
+#error if no extent
+      "extents" => {"ifmissing" => "error", "type" => "array", "items" => {"type" => "JSONModel(:extent) object"}},
       "dates" => {"type" => "array", "items" => {"type" => "JSONModel(:date) object"}},
       "external_documents" => {"type" => "array", "items" => {"type" => "JSONModel(:external_document) object"}},
       "rights_statements" => {"type" => "array", "items" => {"type" => "JSONModel(:rights_statement) object"}},
@@ -118,8 +119,8 @@
       },
 
       "suppressed" => {"type" => "boolean", "readonly" => "true"},
-
-      "acquisition_type" => {"type" => "string", "dynamic_enum" => "accession_acquisition_type"},
+#warn if missing acquisition type
+      "acquisition_type" => {"type" => "string", "ifmissing" => "warn", "dynamic_enum" => "accession_acquisition_type"},
       
       "resource_type" => {"type" => "string", "dynamic_enum" => "accession_resource_type"},
       

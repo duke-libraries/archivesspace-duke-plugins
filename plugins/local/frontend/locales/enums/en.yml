@@ -1,23 +1,33 @@
 en:
   enumeration_names:
     user_defined_enum_1: Primary Collector
+    user_defined_enum_2: Research Centers
     user_defined_enum_3: New/Addition?
     collection_management_processing_priority: Desired Processing Level
 
   enumerations:
     user_defined_enum_1:
+      Amy McDonald: Amy McDonald
       Andrew Armacost: Andrew Armacost
       Jacqueline Reid Wachholz: Jacqueline Reid Wachholz
       John Gartrell: John Gartrell
       Kelly Wooten: Kelly Wooten
       Laura Micham: Laura Micham
       Lisa McCarty: Lisa McCarty
-      Amy McDonald: Amy McDonald
       Naomi Nelson: Naomi Nelson
       Patrick Stawski: Patrick Stawski
       Rachel Ingold: Rachel Ingold
       Sara Seten Berghausen: Sara Seten Berghausen
       Valerie Gillispie: Valerie Gillispie
+    user_defined_enum_2:
+      ada: Archive of Documentary Arts
+      bingham: Sallie Bingham Center
+      franklin: John Hope Franklin Research Center
+      general: General Collections
+      hartman: John W. Hartman Center
+      hom: History of Medicine Collections
+      human_rights: Human Rights Archive
+      university_archives: University Archives
     user_defined_enum_3:
       New: New
       Addition: Addition
@@ -145,6 +155,7 @@ en:
       processing_completed_level2_core_level: Processed-Level 2-Core Level
       processing_completed_level3_folder_level: Processed-Level 3-Folder Level
       processing_completed_level4_item_level: Processed-Level 4-Item Level
+      processing_new_unprocessed: New-Unprocessed
     resource_finding_aid_status:
       published: Published
       placeholder_record: Placeholder Record

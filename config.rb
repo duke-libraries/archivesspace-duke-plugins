@@ -128,7 +128,7 @@ AppConfig[:plugins] = ['local',  'aspace-public-formats', 'aspace-search-identif
 AppConfig[:public_formats_resource_links] = ["ead", "marcxml", "ead_pdf"]
 AppConfig[:public_formats_digital_object_links] = ["dc", "mets", "mods"]
 
-AppConfig[:user_defined_in_basic] = {'accessions' => ['boolean_1','text_1','enum_3','date_1','enum_1','integer_1','integer_2','real_1','boolean_2','text_2'],'hide_user_defined_section' => true }
+AppConfig[:user_defined_in_basic] = {'accessions' => ['boolean_1','text_1','enum_3','date_1','enum_1','enum_2','integer_1','integer_2','real_1','boolean_2','text_2'],'hide_user_defined_section' => true }
 
 #
 ## URL to direct the feedback link

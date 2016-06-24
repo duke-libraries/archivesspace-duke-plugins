@@ -9,6 +9,7 @@ en:
       acquisition_type: Acquisition Type
       accession_id_0_u_ustr: Accession Part 1
       enum_1_enum_s: Primary Collector
+      enum_2_enum_s: Research Center
       enum_3_enum_s: New/Addition
       finding_aid_status: Finding Aid Status
       ead_id: EADID
@@ -46,6 +47,7 @@ en:
       linked_agent_role: Linked Agent Role
       resource_finding_aid_status: Finding Aid Status
       user_defined_enum_1: Primary Collector Name
+      user_defined_enum_2: Research Center
       user_defined_enum_3: New/Addition?
 
   collection_management: &collection_management_attributes
@@ -155,7 +157,7 @@ en:
       date_3: ignore
       date_3_inline_help: e.g. YYYY-MM-DD
       enum_1: Primary Collector Name
-      enum_2: ignore
+      enum_2: Research Center
       enum_3: New or Addition?
       enum_4: ignore
       _singular: Duke Custom Fields
@@ -165,6 +167,7 @@ en:
     _singular: Duke Custom Fields
     _plural: Duke Custom Fields
     enum_1: Primary Collector Name
+    enum_2: Research Center
     enum_3: New or Addition?
     date_1: Arrival Date
     boolean_1: Electronic Media Present?
