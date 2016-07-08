@@ -492,12 +492,16 @@ class EADConverter < Converter
       # now let's make the subnote list 
       type = att('type')
       if type == 'deflist' || (type.nil? && inner_xml.match(/<deflist>/))
-        make :note_definedlist do |note|
+        make :note_definedlist, {
+          :publish => att('audience')!= 'internal',
+       } do |note|
           set ancestor(:note_multipart), :subnotes, note
         end
       else
         make :note_orderedlist, {
-          :enumeration => att('numeration')
+          :enumeration => att('numeration'),
+		  #set to published by default
+		  :publish => att('audience')!= 'internal',
         } do |note|
           set ancestor(:note_multipart), :subnotes, note
         end
