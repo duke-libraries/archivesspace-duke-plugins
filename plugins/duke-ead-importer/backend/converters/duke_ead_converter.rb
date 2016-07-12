@@ -804,6 +804,8 @@ class EADConverter < Converter
   def make_corp_template(opts)
     return nil if inner_xml.strip.empty? 
     make :agent_corporate_entity, {
+#publish name on import.  Will publish unless name already exists and is unpublished.
+      :publish => att('audience')!= 'internal',
       :agent_type => 'agent_corporate_entity'
     } do |corp|
       set ancestor(:resource, :archival_object), :linked_agents, {'ref' => corp.uri, 'role' => opts[:role]}
@@ -823,6 +825,8 @@ class EADConverter < Converter
   def make_family_template(opts)
     return nil if inner_xml.strip.empty? 
     make :agent_family, {
+#publish name on import.  Will publish unless name already exists and is unpublished.
+      :publish => att('audience')!= 'internal',
       :agent_type => 'agent_family',
     } do |family|
       set ancestor(:resource, :archival_object), :linked_agents, {'ref' => family.uri, 'role' => opts[:role]}
@@ -842,6 +846,8 @@ class EADConverter < Converter
   def make_person_template(opts)
     return nil if inner_xml.strip.empty? 
     make :agent_person, {
+#publish name on import.  Will publish unless name already exists and is unpublished.
+      :publish => att('audience')!= 'internal',
       :agent_type => 'agent_person',
     } do |person|
       set ancestor(:resource, :archival_object), :linked_agents, {'ref' => person.uri, 'role' => opts[:role]}
