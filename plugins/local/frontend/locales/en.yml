@@ -41,7 +41,7 @@ en:
     enum:
       accession_acquisition_type: Acquisition Type
       collection_management_processing_priority: Desired Processing Level
-      #collection_management_processing_status: Processing Status
+      collection_management_processing_status: Processing Status
       event_event_type: Event Type
       extent_extent_type: Extent Type
       linked_agent_role: Linked Agent Role

@@ -36,24 +36,21 @@ en:
       unknown: Unknown
       loan: Loan
     collection_management_processing_priority:
-      1 - accessioning: 1 - accessioning
-      2 - core level processing: 2 - core level processing
-      3 - folder level processing: 3 - folder level processing
-      4 - item level processing: 4 - item level processing
+      1 - accessioning: 1-accessioning
+      2 - core level processing: 2-core level processing
+      3 - folder level processing: 3-folder level processing
+      4 - item level processing: 4-item level processing
       do not use - highest research value: do not use - highest research value
       do not use - high research value: do not use - high research value
       do not use - medium research value: do not use - medium research value
       do not use - low research value: do not use - low research value
       do not use - unknown research value: do not use - unknown research value
-#collection management processing status moved to Event type enum
-#    collection_management_processing_status:
-#      completed: Completed
-#      completed_level1_accessioning: Completed - Level 1 - Accessioning
-#      completed_level2_core_level: Completed - Level 2 - Core Level
-#      completed_level3_folder_level: Completed - Level 3 - Folder Level
-#      completed_level4_item_level: Completed - Level 4 - Item Level
-#      new: New
-#      new_unprocessed: New - Unprocessed
+    collection_management_processing_status:
+      completed_level1_accessioning: Processed-L1-Accessioned
+      completed_level2_core_level: Processed-L2-Core Level
+      completed_level3_folder_level: Processed-L3-Folder Level
+      completed_level4_item_level: Processed-L4-Item Level
+      new_unprocessed: New - Unprocessed
 
     container_type:
       artifact-box: artifact-box
