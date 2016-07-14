@@ -32,10 +32,10 @@
       "date_1" => {"type" => "date", "required" => false},
       "date_2" => {"type" => "date", "required" => false},
       "date_3" => {"type" => "date", "required" => false},
-#warn if missing collector name, center name, or new/addition info
-      "enum_1" => {"ifmissing" => "warn", "type" => "string", "dynamic_enum" => "user_defined_enum_1"},
-      "enum_2" => {"ifmissing" => "warn", "type" => "string", "dynamic_enum" => "user_defined_enum_2"},
-      "enum_3" => {"ifmissing" => "warn", "type" => "string", "dynamic_enum" => "user_defined_enum_3"},
+#warn if missing collector name, center name, or new/addition info.
+      "enum_1" => {"type" => "string", "dynamic_enum" => "user_defined_enum_1"},
+      "enum_2" => {"type" => "string", "dynamic_enum" => "user_defined_enum_2"},
+      "enum_3" => {"type" => "string", "dynamic_enum" => "user_defined_enum_3"},
       "enum_4" => {"type" => "string", "dynamic_enum" => "user_defined_enum_4"},
     },
   },
