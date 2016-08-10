@@ -1,0 +1,25 @@
+@media print {
+	body, 
+	#container {
+		width: 100%;
+		margin: 0;
+		float: none;
+		background: #fff url(none);
+		color: #000;
+		font-size: 10pt;
+	}
+	header,
+	footer,
+	#archivesSpaceSidebar,
+	#accession_classifications_,
+	.record-toolbar,
+	.breadcrumb-row,
+	.sidebar,
+	.actions,
+	.table-record-actions {
+		display:none;
+	}
+	label:after {content: ": ";}
+	label {font-weight: bold; float:left;}
+	.label-only {float:left; margin-top: -5pt;}
+}
