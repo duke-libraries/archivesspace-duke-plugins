@@ -22,6 +22,7 @@ The plugins in this repo make the following changes:
 - **duke-marc-exporter**: customizes MARCXML exports to conform to local best practices at Duke. MARCXML records can be imported in OCLC Connexion, validated and further modified (control headings, adjust fixed fields, ect.). Some notes on modifications: https://docs.google.com/spreadsheets/d/1OcnmC-QJIlIv3uN--wr8we50EAxM_566xpj7Vd1wr2w/edit?usp=sharing
 - **duke-export-option-defaults**: changes default options for exporting EAD in staff interface drop-down menu (include_unpublished=false, include_daos=true, numbered_cs=true)
 - **user_defined_in_basic**: adds selected user_defined fields for accession records to the Basic Informaiton Tab of the accession record form and removes the user-defined fields section entirely. Requires modification of config.rb and /plugins/local/frontend/locales/en.yml.  See: https://github.com/hudmol/user_defined_in_basic
+- **printcss**: modifies default print format to remove clutter (applicaton buttons, etc.). Ideal for printing 1-page accession records to attach to boxes on arrival. Developed by Mark Custer at Yale.
 - **local**:
      - Adds branding (RL icon, welcome messages, etc)
      - Adds fields to advanced search drop-down (search_definitions.rb)
