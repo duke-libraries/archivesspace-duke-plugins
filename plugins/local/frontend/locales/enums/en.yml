@@ -175,3 +175,21 @@ en:
       iso: ISO Disk Image (iso)
       zip: Bagit ZIP Archive (zip)
       tar: TARball (tar, tar.gz)
+
+    restriction_type:
+      RestrictedSpecColl: 1 - Donor/university imposed access restriction
+      RestrictedCurApprSpecColl: 2 - Repository imposed access restriction
+      RestrictedFragileSpecColl: 3 - Restricted fragile
+      InProcessSpecColl: 4 - Restricted in-process
+      ColdStorageBrbl: 5 - Other
+      closed_donor_request: Closed by donor Request
+      closed_due_to_university_statue: Closed due to University statute
+      closed_for_processing: Closed for processing
+      closed_until_processing: Closed until processing
+      restricted_due_to_sensitivity: Restricted due to sensitivity
+      restricted_format_difficult: Restricted due to format, difficult
+      restricted_format_erecs: Restricted due to format, e-recs
+      restricted_format_needs_reformatting: Restricted due to format, needs reformatting
+      restricted_medical_content: Restricted due to medical content
+      restricted_unless_donor_permission: Restricted unless donor permission
+      restricted_unless_waiver_signed: Restricted unless waiver signed
