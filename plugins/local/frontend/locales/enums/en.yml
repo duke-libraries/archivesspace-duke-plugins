@@ -183,7 +183,7 @@ en:
       InProcessSpecColl: 4 - Restricted in-process
       ColdStorageBrbl: 5 - Other
       closed_donor_request: Closed by donor Request
-      closed_due_to_university_statue: Closed due to University statute
+      closed_due_to_university_statute: Closed due to University statute
       closed_for_processing: Closed for processing
       closed_until_processing: Closed until processing
       restricted_due_to_sensitivity: Restricted due to sensitivity
