@@ -22,6 +22,7 @@ en:
     user_defined_enum_2:
       ada: Archive of Documentary Arts
       bingham: Sallie Bingham Center
+      economics: Economics
       franklin: John Hope Franklin Research Center
       general: General Collections
       hartman: John W. Hartman Center
@@ -51,6 +52,7 @@ en:
       completed_level3_folder_level: Processed-L3-Folder Level
       completed_level4_item_level: Processed-L4-Item Level
       new_unprocessed: New - Unprocessed
+      removed: Removed from Accession Queue
 
     container_type:
       artifact-box: artifact-box
