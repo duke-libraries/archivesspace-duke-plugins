@@ -15,7 +15,6 @@ The plugins in this repo make the following changes:
 
 - **archivesspace-delete-safety-plugin**: Modified display of Delete button in resource tree view to distinguish between deleting entire resource and archival object.  Plugin courtesy of Trevor Thorton (NCSU): https://github.com/trevorthornton/archivesspace-delete-safety-plugin
 - **aspace-search-identifier**: Adds Identifier column to search result and browse screens
-- **aspace-public-formats**: Exposes EAD, MARCXML, PDF, etc. through public interface.  Links available in sidebar.
 - **duke-advanced-search**: Adds advanced search fields to index (including user-defined fields) and to drop-downs: Four-part-ID, Primary Collector, etc. Must run setup-database.sh with each new upgrade. Modeled after: https://github.com/hudmol/extended_advanced_search
 - **duke-ead-exporter**: customizes EAD exporter to export File Version Use Statement (e.g. image-service, audio-streaming, etc.) as dao/@xlink:role and digital object identifier (typically an ARK) as dao/@xlink:xpointer. Also removes redundant daodesc tags.
 - **duke-ead-importer**: Customizes EAD import converter to make all imported notes "published" by default unless EAD contains @audience='internal' (MAY NOT BE COMPATIBLE WITH RELEASES PRIOR TO 1.4.2)
