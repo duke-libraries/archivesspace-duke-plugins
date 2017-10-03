@@ -1,4 +1,4 @@
-AppConfig[:plugins] = ['local',  'lcnaf', 'archivesspace-delete-safety-plugin', 'aspace-search-identifier', 'duke-advanced-search', 'duke-ead-exporter', 'duke-export-option-defaults', 'duke-marc-exporter', 'user_defined_in_basic', 'aspace-import-excel', 'printcss']
+AppConfig[:plugins] = ['local',  'lcnaf', 'archivesspace-delete-safety-plugin', 'aspace-search-identifier', 'duke-advanced-search', 'duke-ead-exporter', 'duke-export-option-defaults', 'duke-marc-exporter', 'user_defined_in_basic', 'aspace-import-excel', 'printcss', 'digitization-work-order']
 
 
 AppConfig[:user_defined_in_basic] = {'accessions' => ['boolean_1','text_1','enum_3','date_1','enum_2','enum_1','integer_1','integer_2','real_1','boolean_2','text_2'],'hide_user_defined_section' => true }
