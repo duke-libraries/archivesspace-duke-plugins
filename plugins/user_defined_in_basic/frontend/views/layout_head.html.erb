@@ -7,7 +7,7 @@ end
 %>
 
 <% if AppConfig.has_key?(:user_defined_in_basic) %>
-    <%= javascript_include_tag "#{AppConfig[:frontend_prefix]}assets/user_defined_in_basic.js" %>
+    <%= javascript_include_tag "#{AppConfig[:frontend_proxy_prefix]}assets/user_defined_in_basic.js" %>
 
     <script>
      var fields = <%= ASUtils.to_json(map_user_defined_to_labels(AppConfig[:user_defined_in_basic].fetch(controller.controller_name, []))).html_safe %>;
