@@ -186,11 +186,14 @@ en:
       RestrictedFragileSpecColl: 3 - Restricted fragile
       InProcessSpecColl: 4 - Restricted in-process
       ColdStorageBrbl: 5 - Other
-      closed_donor_request: Closed by donor Request
-      closed_due_to_university_statute: Closed due to University statute
+      closed_donor_request: Closed by donor request
+      closed_due_to_university_statute: Closed due to university statute (BOT)
+      closed_ferpa: Closed due to FERPA
       closed_for_processing: Closed for processing
+      closed_personnel_records: Closed due to personnel records
       closed_until_processing: Closed until processing
       restricted_due_to_sensitivity: Restricted due to sensitivity
+      restricted_due_to_university_statute_admin: Restricted due to university statute (admin)
       restricted_format_difficult: Restricted due to format, difficult
       restricted_format_erecs: Restricted due to format, e-recs
       restricted_format_needs_reformatting: Restricted due to format, needs reformatting
