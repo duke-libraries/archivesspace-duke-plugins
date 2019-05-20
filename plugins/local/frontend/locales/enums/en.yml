@@ -1,7 +1,7 @@
 en:
   enumeration_names:
     user_defined_enum_1: Primary Collector
-    user_defined_enum_2: Research Centers
+    user_defined_enum_2: Research Centers / Collecting Areas
     user_defined_enum_3: New/Addition?
     collection_management_processing_priority: Desired Processing Level
 
@@ -28,6 +28,7 @@ en:
       hom: History of Medicine Collections
       human_rights: Human Rights Archive
       ias: International and Area Studies
+      literature: Literature
       university_archives: University Archives
       economics: Economics
     user_defined_enum_3:
@@ -42,74 +43,13 @@ en:
       2 - core level processing: 2-core level processing
       3 - folder level processing: 3-folder level processing
       4 - item level processing: 4-item level processing
-      do not use - highest research value: do not use - highest research value
-      do not use - high research value: do not use - high research value
-      do not use - medium research value: do not use - medium research value
-      do not use - low research value: do not use - low research value
-      do not use - unknown research value: do not use - unknown research value
+
     collection_management_processing_status:
       completed_level1_accessioning: Processed-L1-Accessioned
-      completed_level2_core_level: Processed-L2-Core Level
-      completed_level3_folder_level: Processed-L3-Folder Level
-      completed_level4_item_level: Processed-L4-Item Level
+      completed: Completed
       new_unprocessed: New - Unprocessed
       removed: Removed
-
-    container_type:
-      artifact-box: artifact-box
-      audio-cassette: audio-cassette
-      audio-cd: audio-cd
-      audio-disc: audio-disc
-      audio-file: audio-file
-      audio-phonodisc: audio-phonodisc
-      audio-reel: audio-reel
-      box: box
-      carton: carton
-      case: case
-      cassette: cassette
-      cassette-box: cassette-box
-      cd: cd
-      cigar-box: cigar-box
-      data-cd: data-cd
-      disk: disk
-      drawer: drawer
-      dvd: dvd
-      e-folder: e-folder
-      film: film
-      film-reel: film-reel
-      folder: folder
-      frame: frame
-      framed-item: framed-item
-      freezer: freezer
-      image: image
-      index-box: index-box
-      item: item
-      map-case: map-case
-      ms: ms
-      nitrate-cabinet: nitrate-cabinet
-      notebook: notebook
-      object: object
-      optical-disc: optical-disc
-      oversize-box: oversize-box
-      oversize-cabinet: oversize-cabinet
-      oversize-film-can: oversize-film-can
-      oversize-folder: oversize-folder
-      oversize-image: oversize-image
-      page: page
-      print: print
-      reel: reel
-      scrapbook: scrapbook
-      server: server
-      slide-box: slide-box
-      tape: tape
-      tube: tube
-      vault: vault
-      video-cassette: video-cassette
-      video-disc: video-disc
-      video-file: video-file
-      video-reel: video-reel
-      videotape: videotape
-      volume: volume
+      in_progress: In Progress
 
     file_version_use_statement:
       audio-clip: Audio-Clip
@@ -143,26 +83,27 @@ en:
       video-master-edited: Video-Master-Edited
       video-service: Video-Service
       video-streaming: Video-Streaming
+      video-use: Video-Use
       web-resource-link: Web-Resource-Link
 
     event_event_type:
-      acknowledgement_received: Acknowledgement Received
+      acknowledgement_received: Acknowledgment Received
       processing_completed: Processing-Completed
       processing_started: Processing-Started
       processing_new: Processing-Unprocessed
       processing_in_progress: Processing-in-progress
-#      processing_completed_level1_accessioning: Processed-Level 1-Accessioning
-#      processing_completed_level2_core_level: Processed-Level 2-Core Level
-#      processing_completed_level3_folder_level: Processed-Level 3-Folder Level
-#      processing_completed_level4_item_level: Processed-Level 4-Item Level
-#      processing_new_unprocessed: New-Unprocessed
+      processing_completed_level1_accessioning: Processed-Level 1-Accessioning
+      processing_completed_level2_core_level: Processed-Level 2-Core Level
+      processing_completed_level3_folder_level: Processed-Level 3-Folder Level
+      processing_completed_level4_item_level: Processed-Level 4-Item Level
+
     resource_finding_aid_status:
       published: Published
       placeholder_record: Placeholder Record
       temp_record: Temp Record
       temp_record_stead: Temp Record (Steady)
       deleted: Deleted
-      secA_record: Sec. A Temp Record
+
     file_version_file_format_name:
       aiff: Audio Interchange File Format
       avi: Audio/Video Interleaved Format
