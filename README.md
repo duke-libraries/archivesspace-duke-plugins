@@ -1,4 +1,4 @@
-# archivesspace-duke-plugins
+# archivesspace-duke-plugins [DO NOT USE - INDIVIDUAL PLUGINS HAVE BEEN SEPARATED INTO THEIR OWN REPOSITORIES]
 Local plugins for customizing ArchivesSpace at Duke
 
 Each plugin is a directory within the /plugins directory with the name of the plugin (e.g. aspace-search-identifier, lcnaf, local)
